@@ -1,0 +1,39 @@
+<view class="dialog-bg" wx:if="{{visible}}" bindtap='closeDialog'>
+  
+</view>
+<view class='dialog' wx:if="{{visible}}">
+  <view class="pop-indicator"></view>
+  <scroll-view
+    scroll-y="{{true}}"
+    style="height: 500rpx;margin: 20rpx 0 40rpx;"
+    scroll-top="{{scrollTop}}"
+    bindscroll="onScroll"
+  >
+    <view class="emoji-all">
+      <view
+        class="emoji"
+        wx:for="{{emojis}}"
+        wx:key="item"
+        bindtap="chooseEmoji"
+        data-emoji="{{item}}"
+      >{{item.emoji}}</view>
+    </view>
+  </scroll-view>
+  <scroll-view  scroll-x="{{true}}">
+    <view class="group">
+      <view
+        class="group-item {{active === 'recent' ? 'active' : ''}}"
+        bindtap="chooseGroup"
+        data-emojikey="recent"
+        wx:if="{{hasRecent}}"
+      >⏱️</view>
+      <view
+        class="group-item {{active === item ? 'active' : ''}}"
+        wx:for="{{emojiKeys}}"
+        wx:key="{{item}}"
+        bindtap="chooseGroup"
+        data-emojikey="{{item}}"
+      >{{item}}</view>
+    </view>
+  </scroll-view>
+</view>

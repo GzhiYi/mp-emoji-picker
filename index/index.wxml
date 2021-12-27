@@ -1,0 +1,6 @@
+<emoji-picker
+  visible="{{pickerVisiable}}"
+  bind:onSelect="onSelect"
+></emoji-picker>
+<view class="emoji">{{emoji}}</view>
+<button bindtap="changeVisible">显示表情选择器</button>
