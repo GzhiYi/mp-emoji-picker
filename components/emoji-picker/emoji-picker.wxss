@@ -46,8 +46,13 @@
 }
 .group-item {
   margin-right: 20rpx;
-  padding: 12rpx;
   font-size: 52rpx;
+  width: 90rpx;
+  min-width: 90rpx;
+  height: 90rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .emoji-all {
   display: flex;

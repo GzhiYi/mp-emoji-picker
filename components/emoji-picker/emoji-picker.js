@@ -63,11 +63,6 @@ Component({
         visible: false
       })
       this.triggerEvent('onSelect', emoji)
-    },
-    onScroll(e) {
-      this.setData({
-        scrollTop: e.detail.scrollTop
-      })
     }
   }
 })
